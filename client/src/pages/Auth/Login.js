@@ -23,12 +23,12 @@ const Login = () => {
       });
       if (res && res.data.success) {
         toast.success(res.data && res.data.message);
+        const authData = { user: res.data.user, token: res.data.token };
         setAuth({
           ...auth,
-          user: res.data.user,
-          token: res.data.token,
+          ...authData,
         });
-        localStorage.setItem("auth", JSON.stringify(res.data));
+        localStorage.setItem("auth", JSON.stringify(authData));
         navigate(location.state || "/");
       } else {
         toast.error(res.data.message);
