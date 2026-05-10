@@ -6,6 +6,7 @@ import "../styles/HomePage.css";
 import { useForm, ValidationError } from '@formspree/react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useAuth } from "../context/auth";
 //import Category from "./pages/Category";
 
 const ContactForm = () => {
@@ -136,6 +137,8 @@ const ContactForm = () => {
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const [auth] = useAuth();
+  const isLoggedIn = !!auth?.token;
 
   const handleBrowseShop = () => {
     navigate("/category"); // This will redirect to Category.js if the route is set up correctly
@@ -254,7 +257,7 @@ const HomePage = () => {
               <p className="trending-title">Modern Sofa</p>
               <div className="trending-rating">★★★★★</div>
               <p className="trending-price">₹6597</p>
-              <button className="add-to-cart">Add to Cart</button>
+              {isLoggedIn && <button className="add-to-cart">Add to Cart</button>}
             </div>
           </div>
           <div className="trending-item">
@@ -263,7 +266,7 @@ const HomePage = () => {
               <p className="trending-title">Modern Chair</p>
               <div className="trending-rating">★★★★☆</div>
               <p className="trending-price">₹2900 <span className="original-price">$95.00</span></p>
-              <button className="add-to-cart">Add to Cart</button>
+              {isLoggedIn && <button className="add-to-cart">Add to Cart</button>}
             </div>
           </div>
           <div className="trending-item">
@@ -272,7 +275,7 @@ const HomePage = () => {
               <p className="trending-title">Coffee Table</p>
               <div className="trending-rating">★★★★★</div>
               <p className="trending-price">₹3500 <span className="original-price">$85.00</span></p>
-              <button className="add-to-cart">Add to Cart</button>
+              {isLoggedIn && <button className="add-to-cart">Add to Cart</button>}
             </div>
           </div>
           <div className="trending-item">
@@ -281,7 +284,7 @@ const HomePage = () => {
               <p className="trending-title">Tallest Chair</p>
               <div className="trending-rating">★★★★☆</div>
               <p className="trending-price">₹3900 <span className="original-price">$110.00</span></p>
-              <button className="add-to-cart">Add to Cart</button>
+              {isLoggedIn && <button className="add-to-cart">Add to Cart</button>}
             </div>
           </div>
         </div>

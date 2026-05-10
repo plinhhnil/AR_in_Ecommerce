@@ -3,12 +3,14 @@
 // export default Category;
 import React, { useState } from "react";
 import "../styles/category.css";
-import { Link } from "react-router-dom";
 import "@google/model-viewer/dist/model-viewer.min.js";
+import { useAuth } from "../context/auth";
 
 const Category = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [auth] = useAuth();
+  const isLoggedIn = !!auth?.token;
 
   const products = [
     { name: "Table Lamp", rating: "★★★★★", price: "₹4926", originalPrice: "₹4926", image: "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFtcHN8ZW58MHx8MHx8fDA%3D", model: "/models/table_lamp.glb" },
@@ -73,7 +75,7 @@ const Category = () => {
                 <span className="original-price">{product.originalPrice}</span>
               </p>
               <div className="product-actions">
-                <button className="add-to-cart">Add to Cart</button>
+                {isLoggedIn && <button className="add-to-cart">Add to Cart</button>}
                 <button className="ar-button" onClick={() => handleARView(product)}>
                   {/* Use image with verified path */}
                   <img
