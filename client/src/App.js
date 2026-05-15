@@ -16,10 +16,10 @@ import Layout from "./components/Layout/Layout"; // Import Layoutt Layout from "
 function App() {
   return (
     <Layout
-      title="Ar_Ecommerce" // A general title for the app
-      description="Your main ecommerce application" // A general description
-      keywords="ecommerce, shop, online" // General keywords
-      author="Techinfoyt" // General author
+      title="NhaMinh"
+      description="NhaMinh Online Shopping Application"
+      keywords="ecommerce, shop, online"
+      author="Group4"
     >
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -30,7 +30,7 @@ function App() {
           <Route path="admin" element={<AdminDashboard />} />
         </Route>
         <Route path="/register" element={<Register />} />
-        <Route path="/category" element={<Category />} /> 
+        <Route path="/category" element={<Category />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
