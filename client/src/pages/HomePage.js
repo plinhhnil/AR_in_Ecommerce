@@ -4,13 +4,20 @@ import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/HomePage.css";
 import { useAuth } from "../context/auth";
-//import Category from "./pages/Category";
+import { useCart } from "../context/cart";
+import toast from "react-hot-toast";
 
 
 const HomePage = () => {
   const navigate = useNavigate();
   const [auth] = useAuth();
   const isLoggedIn = !!auth?.token;
+  const { addToCart } = useCart();
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    toast.success(`${product.name} added to cart!`);
+  };
 
   const handleBrowseShop = () => {
     navigate("/category"); // This will redirect to Category.js if the route is set up correctly
@@ -68,29 +75,29 @@ const HomePage = () => {
           <h2 style={{ color: "#8B4513", backgroundColor: "#E8F5E9", padding: "10px 20px", display: "inline-block", borderRadius: "8px", margin: "20px 0" }}>Categories</h2>
         </div>
         <div className="categories-grid">
-          <div className="category-box">
+          <div className="category-box" onClick={() => navigate("/category?type=beds")} style={{ cursor: "pointer" }}>
             <img
               className="category-image"
               src="/images/bed_1.jpg"
-              alt="Lamps"
+              alt="Beds"
               style={{ height: "250px", objectFit: "cover", width: "100%" }}
             />
             <div className="category-text">
               <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Beds</p>
             </div>
           </div>
-          <div className="category-box">
+          <div className="category-box" onClick={() => navigate("/category?type=sofas")} style={{ cursor: "pointer" }}>
             <img
               className="category-image"
               src="/images/n_sofa.jpg"
-              alt="Armchairs"
+              alt="Sofas"
               style={{ height: "250px", objectFit: "cover", width: "100%" }}
             />
             <div className="category-text">
-              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Sofa's</p>
+              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Sofas</p>
             </div>
           </div>
-          <div className="category-box">
+          <div className="category-box" onClick={() => navigate("/category?type=tables")} style={{ cursor: "pointer" }}>
             <img
               className="category-image"
               src="/images/cabinet.jpg"
@@ -101,11 +108,11 @@ const HomePage = () => {
               <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Tables</p>
             </div>
           </div>
-          <div className="category-box">
+          <div className="category-box" onClick={() => navigate("/category?type=lamps")} style={{ cursor: "pointer" }}>
             <img
               className="category-image"
               src="/images/etienne-girardet-NGb91VwnOWY-unsplash.jpg"
-              alt="Sofas"
+              alt="Lamps"
               style={{ height: "250px", objectFit: "cover", width: "100%" }}
             />
             <div className="category-text">
@@ -130,7 +137,7 @@ const HomePage = () => {
               <p className="trending-title">Modern Sofa</p>
               <div className="trending-rating">★★★★★</div>
               <p className="trending-price">₹6597</p>
-              {isLoggedIn && <button className="add-to-cart">Add to Cart</button>}
+              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Modern Sofa", price: "₹6597", image: "/images/new_sofa.jpg" })}>Add to Cart</button>}
             </div>
           </div>
           <div className="trending-item">
@@ -139,7 +146,7 @@ const HomePage = () => {
               <p className="trending-title">Modern Chair</p>
               <div className="trending-rating">★★★★☆</div>
               <p className="trending-price">₹2900 <span className="original-price">$95.00</span></p>
-              {isLoggedIn && <button className="add-to-cart">Add to Cart</button>}
+              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Modern Chair", price: "₹2900", image: "/images/n_chair.jpg" })}>Add to Cart</button>}
             </div>
           </div>
           <div className="trending-item">
@@ -148,7 +155,7 @@ const HomePage = () => {
               <p className="trending-title">Coffee Table</p>
               <div className="trending-rating">★★★★★</div>
               <p className="trending-price">₹3500 <span className="original-price">$85.00</span></p>
-              {isLoggedIn && <button className="add-to-cart">Add to Cart</button>}
+              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Coffee Table", price: "₹3500", image: "/images/dinning.jpg" })}>Add to Cart</button>}
             </div>
           </div>
           <div className="trending-item">
@@ -157,7 +164,7 @@ const HomePage = () => {
               <p className="trending-title">Tallest Chair</p>
               <div className="trending-rating">★★★★☆</div>
               <p className="trending-price">₹3900 <span className="original-price">$110.00</span></p>
-              {isLoggedIn && <button className="add-to-cart">Add to Cart</button>}
+              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Tallest Chair", price: "₹3900", image: "/images/table2.jpg" })}>Add to Cart</button>}
             </div>
           </div>
         </div>
