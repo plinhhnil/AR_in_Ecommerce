@@ -1,139 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Carousel } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/HomePage.css";
-import { useForm, ValidationError } from '@formspree/react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { useAuth } from "../context/auth";
 //import Category from "./pages/Category";
 
-const ContactForm = () => {
-  const [state, handleSubmit, reset] = useForm("xqaqkavw"); // Added reset function from useForm
-  const hasShownToastRef = useRef(false); // Track if toast has been shown
-
-  const onSubmit = async (event) => {
-    event.preventDefault(); // Prevent default form submission
-    hasShownToastRef.current = false; // Reset toast flag before submission
-
-    try {
-      const result = await handleSubmit(event);
-      console.log("Formspree response:", result); // Debug log to inspect response
-
-      // Check if there are errors in the response
-      if (result && result.errors && result.errors.length > 0) {
-        throw new Error(result.errors[0]?.message || "Submission failed");
-      }
-
-      // If submission succeeded and no errors, show success toast
-      if (state.succeeded) {
-        if (!hasShownToastRef.current) {
-          hasShownToastRef.current = true;
-          toast.success("Thanks for your message!", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-          });
-          // Reset form fields and state
-          document.getElementById("contact-form").reset();
-          reset(); // Reset Formspree state to clear succeeded/errors
-        }
-      } else {
-        throw new Error("Submission did not succeed");
-      }
-    } catch (error) {
-      console.error("Form submission error:", error); // Debug log for errors
-      if (!hasShownToastRef.current) {
-        hasShownToastRef.current = true;
-        toast.error(error.message || "Failed to submit the form. Please try again.", {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-        });
-      }
-    }
-  };
-
-  // Reset the toast flag when a new submission starts
-  useEffect(() => {
-    if (state.submitting) {
-      hasShownToastRef.current = false;
-    }
-  }, [state.submitting]);
-
-  return (
-    <form id="contact-form" onSubmit={onSubmit} className="contact-form">
-      <div className="contact-form-field">
-        <label htmlFor="name" className="contact-form-label">
-          Name
-        </label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          className="contact-form-input"
-          required
-        />
-        <ValidationError
-          prefix="Name"
-          field="name"
-          errors={state.errors}
-          className="contact-form-error"
-        />
-      </div>
-      <div className="contact-form-field">
-        <label htmlFor="email" className="contact-form-label">
-          Email Address
-        </label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          className="contact-form-input"
-          required
-        />
-        <ValidationError
-          prefix="Email"
-          field="email"
-          errors={state.errors}
-          className="contact-form-error"
-        />
-      </div>
-      <div className="contact-form-field">
-        <label htmlFor="message" className="contact-form-label">
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          className="contact-form-textarea"
-          rows="4"
-          required
-        />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-          className="contact-form-error"
-        />
-      </div>
-      <button
-        type="submit"
-        disabled={state.submitting}
-        className="contact-form-button"
-      >
-        Submit
-      </button>
-    </form>
-  );
-};
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -146,7 +18,6 @@ const HomePage = () => {
 
   return (
     <>
-      <ToastContainer />
       <Carousel style={{ height: "85vh" }}>
         <Carousel.Item>
           <div className="carousel-image-container">
@@ -193,7 +64,9 @@ const HomePage = () => {
 
       {/* Categories Section */}
       <div className="categories-section">
-        <h2>Categories</h2>
+        <div style={{ textAlign: "left", padding: "0 20px", maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ color: "#8B4513", backgroundColor: "#E8F5E9", padding: "10px 20px", display: "inline-block", borderRadius: "8px", margin: "20px 0" }}>Categories</h2>
+        </div>
         <div className="categories-grid">
           <div className="category-box">
             <img
@@ -244,9 +117,9 @@ const HomePage = () => {
 
       {/* Trending Now Section */}
       <div className="trending-section">
-        <div className="trending-header">
-          <h2>Trending Now</h2>
-          <button className="browse-shop" onClick={handleBrowseShop}>
+        <div className="trending-header" style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "20px", marginBottom: "20px", backgroundColor: "#E8F5E9", padding: "10px 20px", borderRadius: "8px" }}>
+          <h2 style={{ color: "#8B4513", margin: 0, flex: "none", textAlign: "left" }}>Top Choices</h2>
+          <button className="browse-shop" onClick={handleBrowseShop} style={{ position: "static", backgroundColor: "#4CAF50", color: "white", fontWeight: "bold", padding: "8px 20px", borderRadius: "25px", border: "none" }}>
             Browse Shop <span>»</span>
           </button>
         </div>
@@ -290,12 +163,9 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Contact Us Section */}
-      <div className="contact-section">
-        <div className="container">
-          <h2>Contact Us</h2>
-          <ContactForm />
-        </div>
+      {/* AR App Banner Image */}
+      <div style={{ display: "flex", justifyContent: "center", margin: "40px 0", padding: "40px 20px", backgroundColor: "#E8F5E9" }}>
+        <img src="/images/banner_nhaminh.jpg" alt="AR App Banner" style={{ width: "100%", maxWidth: "1200px", height: "auto", objectFit: "contain", borderRadius: "8px" }} />
       </div>
     </>
   );

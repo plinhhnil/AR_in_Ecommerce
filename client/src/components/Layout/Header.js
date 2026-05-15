@@ -1,8 +1,3 @@
-// {/* <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-// <NavLink to="/" className="navbar-brand fw-bold">
-//   <FaShoppingCart /> Try<span className="text-primary">Now</span>
-// </NavLink> */}
-
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../../context/auth";
@@ -19,9 +14,16 @@ const Header = () => {
     localStorage.removeItem("auth");
     toast.success("Logout Successfully");
   };
+
+  const navLinkStyle = {
+    textTransform: 'capitalize',
+    color: '#4CAF50',
+    fontWeight: 'bold'
+  };
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#FFFDE7", padding: "1.5rem 1rem" }}>
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -35,29 +37,30 @@ const Header = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link to="/" className="navbar-brand">
-              🛒 NPS Vision
+            <Link to="/" className="navbar-brand" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <img src="/images/logo_nhaminh.png" alt="Nhà Mình Logo" style={{ height: "40px" }} />
+              <span style={{ color: '#c85a40', fontWeight: 'bold', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', textTransform: 'lowercase' }}>nhà mình</span>
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink to="/" className="nav-link ">
+                <NavLink to="/" className="nav-link" style={navLinkStyle}>
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/category" className="nav-link ">
+                <NavLink to="/category" className="nav-link" style={navLinkStyle}>
                   Category
                 </NavLink>
               </li>
               {!auth?.user ? (
                 <>
                   <li className="nav-item">
-                    <NavLink to="/register" className="nav-link">
+                    <NavLink to="/register" className="nav-link" style={navLinkStyle}>
                       Register
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/login" className="nav-link">
+                    <NavLink to="/login" className="nav-link" style={navLinkStyle}>
                       Login
                     </NavLink>
                   </li>
@@ -71,6 +74,7 @@ const Header = () => {
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      style={navLinkStyle}
                     >
                       {auth?.user?.name}
                     </NavLink>
@@ -79,6 +83,7 @@ const Header = () => {
                         <NavLink
                           to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}
                           className="dropdown-item"
+                          style={navLinkStyle}
                         >
                           Dashboard
                         </NavLink>
@@ -88,6 +93,7 @@ const Header = () => {
                           onClick={handleLogout}
                           to="/login"
                           className="dropdown-item"
+                          style={navLinkStyle}
                         >
                           Logout
                         </NavLink>
@@ -97,7 +103,7 @@ const Header = () => {
                 </>
               )}
               <li className="nav-item">
-                <NavLink to="/cart" className="nav-link">
+                <NavLink to="/cart" className="nav-link" style={navLinkStyle}>
                   Cart (0)
                 </NavLink>
               </li>
