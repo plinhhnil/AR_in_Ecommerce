@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { Helmet } from "react-helmet";
 import { Toaster } from "react-hot-toast";
+import Chatbot from "../Chatbot";
 
 const Layout = ({ children, title, description, keywords, author }) => {
   return (
@@ -20,6 +21,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
         {children}
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 };

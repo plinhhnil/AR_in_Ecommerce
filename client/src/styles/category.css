@@ -272,10 +272,12 @@
 }
 .product-details {
   padding: 15px;
+  background-color: #E3F2FD;
 }
 .product-details h3 {
   margin: 0;
   font-size: 18px;
+  color: #006400;
 }
 .product-rating {
   color: #f5c518;
@@ -298,14 +300,15 @@
 }
 .add-to-cart {
   padding: 8px 12px;
-  background-color: #28a745;
+  background-color: #5C4033;
   color: white;
+  font-weight: bold;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 .add-to-cart:hover {
-  background-color: #218838;
+  background-color: #3E2723;
 }
 .ar-button {
   padding: 8px;
