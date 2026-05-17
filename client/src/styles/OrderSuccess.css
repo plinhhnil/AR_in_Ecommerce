@@ -1,0 +1,107 @@
+.order-success-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.success-icon {
+  font-size: 80px;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.order-success-page h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.order-success-page p {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.order-receipt {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.order-ref {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.receipt-details h3 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #eee;
+  font-size: 18px;
+  color: #333;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.continue-shopping-btn {
+  padding: 12px 30px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.continue-shopping-btn:hover {
+  background: #0056b3;
+}
+
+.view-orders-btn {
+  padding: 12px 30px;
+  background: #fff;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #007bff;
+  transition: all 0.3s;
+}
+
+.view-orders-btn:hover {
+  background: #f0f7ff;
+}

@@ -80,6 +80,22 @@ const CartPage = () => {
           <button className="clear-btn" onClick={clearCart}>
             Clear Cart
           </button>
+          <button 
+            className="checkout-btn" 
+            onClick={() => navigate("/checkout")} 
+            style={{ 
+              marginLeft: "10px", 
+              padding: "10px 20px", 
+              background: "#007bff", 
+              color: "white", 
+              border: "none", 
+              borderRadius: "6px", 
+              cursor: "pointer", 
+              fontWeight: "bold" 
+            }}
+          >
+            Proceed to Checkout
+          </button>
         </div>
       </div>
     </div>

@@ -92,6 +92,15 @@ const Header = () => {
                       </li>
                       <li>
                         <NavLink
+                          to="/dashboard/user/orders"
+                          className="dropdown-item"
+                          style={navLinkStyle}
+                        >
+                          History
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
                           onClick={handleLogout}
                           to="/login"
                           className="dropdown-item"
