@@ -61,9 +61,9 @@ const Checkout = () => {
     return (
       <div className="checkout-page" style={{ justifyContent: "center", alignItems: "center" }}>
         <div style={{ textAlign: "center" }}>
-          <h2>Your Cart is Empty</h2>
+          <h2>Giỏ Hàng Của Bạn Trống</h2>
           <button className="place-order-btn" style={{ width: "auto", padding: "10px 20px" }} onClick={() => navigate("/category")}>
-            Go to Shop
+            Đi Đến Cửa Hàng
           </button>
         </div>
       </div>
@@ -73,45 +73,45 @@ const Checkout = () => {
   return (
     <div className="checkout-page">
       <div className="checkout-form-container">
-        <h2>Shipping Details</h2>
+        <h2>Chi Tiết Vận Chuyển</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Full Name</label>
+            <label>Họ Tên Đầy Đủ</label>
             <input type="text" name="fullName" value={formData.fullName} onChange={handleInputChange} required />
           </div>
           <div className="form-group">
-            <label>Email Address</label>
+            <label>Địa Chỉ Email</label>
             <input type="email" name="email" value={formData.email} onChange={handleInputChange} required />
           </div>
           <div className="form-group">
-            <label>Address</label>
+            <label>Địa Chỉ</label>
             <textarea name="address" value={formData.address} onChange={handleInputChange} rows="3" required></textarea>
           </div>
           <div className="form-group">
-            <label>City</label>
+            <label>Thành Phố</label>
             <input type="text" name="city" value={formData.city} onChange={handleInputChange} required />
           </div>
           <div className="form-group">
-            <label>Phone Number</label>
+            <label>Số Điện Thoại</label>
             <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required />
           </div>
-          <button type="submit" className="place-order-btn">Place Order</button>
+          <button type="submit" className="place-order-btn">Đặt Hàng</button>
         </form>
       </div>
 
       <div className="checkout-summary">
-        <h3>Order Summary</h3>
+        <h3>Tóm Tắt Đơn Hàng</h3>
         <div className="summary-items">
           {cart.map((item, index) => (
             <div key={index} className="summary-item">
               <span>{item.name} (x{item.quantity})</span>
-              <span>₹{(parsePrice(item.price) * item.quantity).toLocaleString()}</span>
+              <span>₫{(parsePrice(item.price) * item.quantity).toLocaleString()}</span>
             </div>
           ))}
         </div>
         <div className="summary-total">
-          <span>Total</span>
-          <span>₹{totalPrice.toLocaleString()}</span>
+          <span>Tổng Cộng</span>
+          <span>₫{totalPrice.toLocaleString()}</span>
         </div>
       </div>
     </div>

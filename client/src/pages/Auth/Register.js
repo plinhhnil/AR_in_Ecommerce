@@ -40,7 +40,7 @@ const Register = () => {
   return (
     <div className="form-container ">
       <form onSubmit={handleSubmit}>
-        <h4 className="title">REGISTER FORM</h4>
+        <h4 className="title">BIỂU MẫU ĐĂNG KÝ</h4>
         <div className="mb-3">
           <input
             type="text"
@@ -48,7 +48,7 @@ const Register = () => {
             onChange={(e) => setName(e.target.value)}
             className="form-control"
             id="exampleInputEmail1"
-            placeholder="Enter Your Name"
+            placeholder="Nhập Tên Của Bạn"
             required
             autoFocus
           />
@@ -60,7 +60,7 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
             className="form-control"
             id="exampleInputEmail1"
-            placeholder="Enter Your Email "
+            placeholder="Nhập Email Của Bạn"
             required
           />
         </div>
@@ -71,7 +71,7 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="form-control"
             id="exampleInputPassword1"
-            placeholder="Enter Your Password"
+            placeholder="Nhập Mật Khẩu Của Bạn"
             required
           />
         </div>
@@ -82,7 +82,7 @@ const Register = () => {
             onChange={(e) => setPhone(e.target.value)}
             className="form-control"
             id="exampleInputEmail1"
-            placeholder="Enter Your Phone"
+            placeholder="Nhập Số Điện Thoại Của Bạn"
             required
           />
         </div>
@@ -93,7 +93,7 @@ const Register = () => {
             onChange={(e) => setAddress(e.target.value)}
             className="form-control"
             id="exampleInputEmail1"
-            placeholder="Enter Your Address"
+            placeholder="Nhập Địa Chỉ Của Bạn"
             required
           />
         </div>
@@ -104,12 +104,12 @@ const Register = () => {
             onChange={(e) => setAnswer(e.target.value)}
             className="form-control"
             id="exampleInputEmail1"
-            placeholder="What is Your Favorite Color?"
+            placeholder="Màu Yêu Thích Của Bạn Là Gì?"
             required
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          REGISTER
+          ĐĂNG KÝ
         </button>
       </form>
     </div>

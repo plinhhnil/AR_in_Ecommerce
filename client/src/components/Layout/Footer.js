@@ -13,14 +13,14 @@ const Footer = () => {
             <span style={{ color: '#c85a40', fontWeight: 'bold', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', textTransform: 'lowercase', fontSize: '1.5rem' }}>nhà mình</span>
           </div>
           <div className="footer-copyright" style={{ color: "#FFF", margin: 0 }}>
-            All Rights Reserved © {new Date().getFullYear()} <span style={{ color: '#c85a40', fontWeight: 'bold', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', textTransform: 'lowercase' }}>nhà mình</span>
+            Bản quyền © {new Date().getFullYear()} <span style={{ color: '#c85a40', fontWeight: 'bold', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', textTransform: 'lowercase' }}>nhà mình</span>
           </div>
         </div>
 
         {/* Right Side: Links */}
         <div className="footer-links" style={{ display: "flex", gap: "20px", margin: 0 }}>
-          <a href="/about" style={{ color: "#FFF", textDecoration: "none" }}>About</a>
-          <a href="/contact" style={{ color: "#FFF", textDecoration: "none" }}>Contact</a>
+          <a href="/about" style={{ color: "#FFF", textDecoration: "none" }}>Giới Thiệu</a>
+          <a href="/contact" style={{ color: "#FFF", textDecoration: "none" }}>Liên Hệ</a>
         </div>
       </div>
     </footer>

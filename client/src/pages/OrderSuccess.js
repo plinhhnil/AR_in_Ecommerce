@@ -18,26 +18,26 @@ const OrderSuccess = () => {
   return (
     <div className="order-success-page">
       <div className="success-icon">✅</div>
-      <h1>Order Placed Successfully!</h1>
-      <p>Thank you for your purchase. Your order has been received.</p>
+      <h1>Đơn Hàng Được Đặt Thành Công!</h1>
+      <p>Cảm ơn bạn đã mua hàng. Đơn hàng của bạn đã được nhận.</p>
       
       <div className="order-receipt">
-        <div className="order-ref">Order Reference: #{orderNumber}</div>
+        <div className="order-ref">Số Tham Chiếu Đơn Hàng: #{orderNumber}</div>
         
         {order && (
           <div className="receipt-details">
-            <h3>Receipt</h3>
+            <h3>Hóa Đơn</h3>
             <div className="receipt-items">
               {order.items.map((item, index) => (
                 <div key={index} className="receipt-item">
                   <span>{item.name} (x{item.quantity})</span>
-                  <span>₹{(parsePrice(item.price) * item.quantity).toLocaleString()}</span>
+                  <span>₫{(parsePrice(item.price) * item.quantity).toLocaleString()}</span>
                 </div>
               ))}
             </div>
             <div className="receipt-total">
-              <strong>Total Paid:</strong>
-              <strong>₹{order.total.toLocaleString()}</strong>
+              <strong>Tổng Thanh Toán:</strong>
+              <strong>₫{order.total.toLocaleString()}</strong>
             </div>
           </div>
         )}
@@ -45,10 +45,10 @@ const OrderSuccess = () => {
 
       <div className="action-buttons">
         <Link to="/dashboard/user/orders" className="view-orders-btn">
-          View Order History
+          Xem Lịch Sử Đơn Hàng
         </Link>
         <Link to="/" className="continue-shopping-btn">
-          Continue Shopping
+          Tiếp Tục Mua Sắm
         </Link>
       </div>
     </div>

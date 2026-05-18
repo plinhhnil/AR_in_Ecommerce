@@ -14,7 +14,7 @@ const Header = () => {
       token: "",
     });
     localStorage.removeItem("auth");
-    toast.success("Logout Successfully");
+    toast.success("Đăng Xuất Thành Công");
   };
 
   const navLinkStyle = {
@@ -46,24 +46,24 @@ const Header = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink to="/" className="nav-link" style={navLinkStyle}>
-                  Home
+                  Trang Chủ
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to="/category" className="nav-link" style={navLinkStyle}>
-                  Category
+                  Danh Mục
                 </NavLink>
               </li>
               {!auth?.user ? (
                 <>
                   <li className="nav-item">
                     <NavLink to="/register" className="nav-link" style={navLinkStyle}>
-                      Register
+                      Đăng Ký
                     </NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink to="/login" className="nav-link" style={navLinkStyle}>
-                      Login
+                      Đăng Nhập
                     </NavLink>
                   </li>
                 </>
@@ -87,7 +87,7 @@ const Header = () => {
                           className="dropdown-item"
                           style={navLinkStyle}
                         >
-                          Dashboard
+                          Bảng Điều Khiển
                         </NavLink>
                       </li>
                       <li>
@@ -96,7 +96,7 @@ const Header = () => {
                           className="dropdown-item"
                           style={navLinkStyle}
                         >
-                          History
+                          Lịch Sử
                         </NavLink>
                       </li>
                       <li>
@@ -106,7 +106,7 @@ const Header = () => {
                           className="dropdown-item"
                           style={navLinkStyle}
                         >
-                          Logout
+                          Đăng Xuất
                         </NavLink>
                       </li>
                     </ul>
@@ -115,7 +115,7 @@ const Header = () => {
               )}
               <li className="nav-item">
                 <NavLink to="/cart" className="nav-link" style={navLinkStyle}>
-                  Cart ({cartCount})
+                  Giỏ Hàng ({cartCount})
                 </NavLink>
               </li>
             </ul>

@@ -21,7 +21,7 @@ const ContactForm = () => {
       if (state.succeeded) {
         if (!hasShownToastRef.current) {
           hasShownToastRef.current = true;
-          toast.success("Thanks for your message!", {
+          toast.success("Cảm ơn bạn đã gửi tin nhắn!", {
             position: "top-right",
             autoClose: 3000,
           });
@@ -35,7 +35,7 @@ const ContactForm = () => {
       console.error("Form submission error:", error);
       if (!hasShownToastRef.current) {
         hasShownToastRef.current = true;
-        toast.error(error.message || "Failed to submit the form. Please try again.", {
+        toast.error(error.message || "Không thể gửi biểu mẫu. Vui lòng thử lại.", {
           position: "top-right",
           autoClose: 3000,
         });
@@ -63,7 +63,7 @@ const ContactForm = () => {
     <form id="contact-form" onSubmit={onSubmit} style={{ maxWidth: '500px', margin: '0 auto', background: '#fff', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
       <div style={{ marginBottom: '20px' }}>
         <label htmlFor="email" style={labelStyle}>
-          Email Address
+          Địa Chỉ Email
         </label>
         <input
           id="email"
@@ -82,7 +82,7 @@ const ContactForm = () => {
       </div>
       <div style={{ marginBottom: '20px' }}>
         <label htmlFor="message" style={labelStyle}>
-          Message
+          Tin Nhắn
         </label>
         <textarea
           id="message"
@@ -104,7 +104,7 @@ const ContactForm = () => {
         disabled={state.submitting}
         style={{ width: '100%', padding: '10px 0', fontSize: '1.1rem', fontWeight: 'bold', color: '#fff', backgroundColor: '#8B4513', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
       >
-        Send!
+        Gửi!
       </button>
     </form>
   );
