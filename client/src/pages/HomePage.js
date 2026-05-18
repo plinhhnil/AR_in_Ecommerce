@@ -16,7 +16,7 @@ const HomePage = () => {
 
   const handleAddToCart = (product) => {
     addToCart(product);
-    toast.success(`${product.name} added to cart!`);
+    toast.success(`${product.name} được thêm vào giỏ hàng!`);
   };
 
   const handleBrowseShop = () => {
@@ -31,12 +31,12 @@ const HomePage = () => {
             <img
               className="d-block w-100"
               src="/images/hero-furniture.jpg"
-              alt="First slide"
+              alt="Slide đầu tiên"
               style={{ height: "85vh", objectFit: "cover" }}
             />
             <div className="carousel-text">
-              <h1>Big Savings Await!</h1>
-              <p>Discover Unbeatable Deals on Furniture</p>
+              <h1>Giảm Giá Lớn Đang Chờ!</h1>
+              <p>Khám Phá Những Ưu Đãi Không Thể Bỏ Lỡ Về Nội Thất</p>
             </div>
           </div>
         </Carousel.Item>
@@ -45,12 +45,12 @@ const HomePage = () => {
             <img
               className="d-block w-100"
               src="/images/lamp.jpg"
-              alt="Second slide"
+              alt="Slide thứ hai"
               style={{ height: "85vh", objectFit: "cover" }}
             />
             <div className="carousel-text">
-              <h1>Explore Exclusive Sofa</h1>
-              <p>Luxury Comfort at Affordable Prices</p>
+              <h1>Khám Phá Sofa Độc Quyền</h1>
+              <p>Sự Thoải Mái Sang Trọng Với Giá Hợp Lý</p>
             </div>
           </div>
         </Carousel.Item>
@@ -59,7 +59,7 @@ const HomePage = () => {
             <img
               className="d-block w-100"
               src="/images/new_bed.jpg"
-              alt="Third slide"
+              alt="Slide thứ ba"
               style={{ height: "85vh", objectFit: "cover" }}
             />
             <div className="carousel-text">
@@ -72,46 +72,46 @@ const HomePage = () => {
       {/* Trending Now Section */}
       <div className="trending-section">
         <div className="trending-header" style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "20px", marginBottom: "20px", backgroundColor: "#DFF4D6", padding: "10px 20px", borderRadius: "8px" }}>
-          <h2 style={{ color: "#8B4513", margin: 0, flex: "none", textAlign: "left" }}>Top Choices</h2>
+          <h2 style={{ color: "#8B4513", margin: 0, flex: "none", textAlign: "left" }}>Lựa Chọn Hàng Đầu</h2>
           <button className="browse-shop" onClick={handleBrowseShop} style={{ position: "static", backgroundColor: "#ff6b8a", color: "white", fontWeight: "bold", padding: "8px 20px", borderRadius: "25px", border: "none" }}>
-            Explore
+            Khám Phá
           </button>
         </div>
         <div className="trending-grid">
           <div className="trending-item">
-            <img src="/images/new_sofa.jpg" alt="Modern Sofa" className="trending-image" />
+            <img src="/images/new_sofa.jpg" alt="Sofa Hiện Đại" className="trending-image" />
             <div className="trending-details">
-              <p className="trending-title">Modern Sofa</p>
+              <p className="trending-title">Sofa Hiện Đại</p>
               <div className="trending-rating">★★★★★</div>
-              <p className="trending-price">₹6597</p>
-              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Modern Sofa", price: "₹6597", image: "/images/new_sofa.jpg" })}>Add to Cart</button>}
+              <p className="trending-price">₫164,925,000</p>
+              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Sofa Hiện Đại", price: "₫164,925,000", image: "/images/new_sofa.jpg" })}>Thêm vào Giỏ</button>}
             </div>
           </div>
           <div className="trending-item">
-            <img src="/images/n_chair.jpg" alt="Modern Chair" className="trending-image" />
+            <img src="/images/n_chair.jpg" alt="Ghế Hiện Đại" className="trending-image" />
             <div className="trending-details">
-              <p className="trending-title">Modern Chair</p>
+              <p className="trending-title">Ghế Hiện Đại</p>
               <div className="trending-rating">★★★★☆</div>
-              <p className="trending-price">₹2900 <span className="original-price">$95.00</span></p>
-              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Modern Chair", price: "₹2900", image: "/images/n_chair.jpg" })}>Add to Cart</button>}
+              <p className="trending-price">₫72,500,000 <span className="original-price">$2,900</span></p>
+              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Ghế Hiện Đại", price: "₫72,500,000", image: "/images/n_chair.jpg" })}>Thêm vào Giỏ</button>}
             </div>
           </div>
           <div className="trending-item">
-            <img src="/images/dinning.jpg" alt="Coffee Table" className="trending-image" />
+            <img src="/images/dinning.jpg" alt="Bàn Cà Phê" className="trending-image" />
             <div className="trending-details">
-              <p className="trending-title">Coffee Table</p>
+              <p className="trending-title">Bàn Cà Phê</p>
               <div className="trending-rating">★★★★★</div>
-              <p className="trending-price">₹3500 <span className="original-price">$85.00</span></p>
-              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Coffee Table", price: "₹3500", image: "/images/dinning.jpg" })}>Add to Cart</button>}
+              <p className="trending-price">₫87,500,000 <span className="original-price">$3,500</span></p>
+              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Bàn Cà Phê", price: "₫87,500,000", image: "/images/dinning.jpg" })}>Thêm vào Giỏ</button>}
             </div>
           </div>
           <div className="trending-item">
-            <img src="/images/table2.jpg" alt="Tallest Chair" className="trending-image" />
+            <img src="/images/table2.jpg" alt="Ghế Cao Nhất" className="trending-image" />
             <div className="trending-details">
-              <p className="trending-title">Tallest Chair</p>
+              <p className="trending-title">Ghế Cao Nhất</p>
               <div className="trending-rating">★★★★☆</div>
-              <p className="trending-price">₹3900 <span className="original-price">$110.00</span></p>
-              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Tallest Chair", price: "₹3900", image: "/images/table2.jpg" })}>Add to Cart</button>}
+              <p className="trending-price">₫97,500,000 <span className="original-price">$3,900</span></p>
+              {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Ghế Cao Nhất", price: "₫97,500,000", image: "/images/table2.jpg" })}>Thêm vào Giỏ</button>}
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ const HomePage = () => {
       {/* Categories Section */}
       <div className="categories-section">
         <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "20px", margin: "0 auto 20px", backgroundColor: "#DFF4D6", padding: "10px 20px", borderRadius: "8px", maxWidth: "1200px", width: "90vw" }}>
-          <h2 style={{ color: "#8B4513", margin: 0, flex: "none", textAlign: "left" }}>Our Productline</h2>
+          <h2 style={{ color: "#8B4513", margin: 0, flex: "none", textAlign: "left" }}>Dòng Sản Phẩm Của Chúng Tôi</h2>
         </div>
         <div className="categories-grid">
           <div className="category-box" onClick={() => navigate("/category?type=sofas")} style={{ cursor: "pointer" }}>
@@ -138,33 +138,33 @@ const HomePage = () => {
             <img
               className="category-image"
               src="/images/bed_1.jpg"
-              alt="Bed"
+              alt="Giường"
               style={{ height: "250px", objectFit: "cover", width: "100%" }}
             />
             <div className="category-text">
-              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Bed</p>
+              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Giường</p>
             </div>
           </div>
           <div className="category-box" onClick={() => navigate("/category?type=lamps")} style={{ cursor: "pointer" }}>
             <img
               className="category-image"
               src="/images/etienne-girardet-NGb91VwnOWY-unsplash.jpg"
-              alt="Lamp"
+              alt="Đèn"
               style={{ height: "250px", objectFit: "cover", width: "100%" }}
             />
             <div className="category-text">
-              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Lamp</p>
+              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Đèn</p>
             </div>
           </div>
           <div className="category-box" onClick={() => navigate("/category?type=tables")} style={{ cursor: "pointer" }}>
             <img
               className="category-image"
               src="/images/cabinet.jpg"
-              alt="Table"
+              alt="Bàn"
               style={{ height: "250px", objectFit: "cover", width: "100%" }}
             />
             <div className="category-text">
-              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Table</p>
+              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Bàn</p>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ const HomePage = () => {
 
       {/* AR App Banner Image */}
       <div style={{ display: "flex", justifyContent: "center", margin: "40px 0", padding: "40px 20px", backgroundColor: "#E8F5E9" }}>
-        <img src="/images/banner_nhaminh.jpg" alt="AR App Banner" style={{ width: "100%", maxWidth: "1200px", height: "auto", objectFit: "contain", borderRadius: "8px" }} />
+        <img src="/images/banner_nhaminh.jpg" alt="Banner Ứng Dụng AR" style={{ width: "100%", maxWidth: "1200px", height: "auto", objectFit: "contain", borderRadius: "8px" }} />
       </div>
     </>
   );

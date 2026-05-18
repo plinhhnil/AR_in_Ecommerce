@@ -21,11 +21,11 @@ const CartPage = () => {
   if (cart.length === 0) {
     return (
       <div className="cart-page">
-        <h2>Shopping Cart</h2>
+        <h2>Giỏ Hàng</h2>
         <div className="empty-cart">
-          <p>Your cart is empty</p>
+          <p>Giỏ hàng của bạn trống</p>
           <button className="browse-btn" onClick={() => navigate("/category")}>
-            Browse Products
+            Duyệt Sản Phẩm
           </button>
         </div>
       </div>
@@ -34,7 +34,7 @@ const CartPage = () => {
 
   return (
     <div className="cart-page">
-      <h2>Shopping Cart ({cartCount} items)</h2>
+      <h2>Giỏ Hàng ({cartCount} sản phẩm)</h2>
 
       <div className="cart-items">
         {cart.map((item) => (
@@ -74,11 +74,11 @@ const CartPage = () => {
 
       <div className="cart-summary">
         <div className="total">
-          Total: <span>₹{totalPrice.toLocaleString()}</span>
+          Tổng: <span>₫{totalPrice.toLocaleString()}</span>
         </div>
         <div className="cart-actions">
           <button className="clear-btn" onClick={clearCart}>
-            Clear Cart
+            Xóa Giỏ Hàng
           </button>
           <button 
             className="checkout-btn" 
@@ -94,7 +94,7 @@ const CartPage = () => {
               fontWeight: "bold" 
             }}
           >
-            Proceed to Checkout
+            Tiến Hành Thanh Toán
           </button>
         </div>
       </div>

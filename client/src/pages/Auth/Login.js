@@ -42,7 +42,7 @@ const Login = () => {
   return (
     <div className="form-container ">
       <form onSubmit={handleSubmit}>
-        <h4 className="title">LOGIN FORM</h4>
+        <h4 className="title">BIỂU MẫU ĐĂNG NHẬP</h4>
 
         <div className="mb-3">
           <input
@@ -51,7 +51,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
             className="form-control"
             id="exampleInputEmail1"
-            placeholder="Enter Your Email "
+            placeholder="Nhập Email Của Bạn"
             required
           />
         </div>
@@ -62,7 +62,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="form-control"
             id="exampleInputPassword1"
-            placeholder="Enter Your Password"
+            placeholder="Nhập Mật Khẩu Của Bạn"
             required
           />
         </div>
@@ -74,12 +74,12 @@ const Login = () => {
               navigate("/forgot-password");
             }}
           >
-            Forgot Password
+            Quên Mật Khẩu
           </button>
         </div>
 
         <button type="submit" className="btn btn-primary">
-          LOGIN
+          ĐĂNG NHẬP
         </button>
       </form>
     </div>

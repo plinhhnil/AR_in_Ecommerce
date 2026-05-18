@@ -29,30 +29,30 @@ const Category = () => {
 
   const handleAddToCart = (product) => {
     addToCart(product);
-    toast.success(`${product.name} added to cart!`);
+    toast.success(`${product.name} được thêm vào giỏ hàng!`);
   };
 
   const products = [
-    { name: "Table Lamp", category: "lamps", rating: "★★★★★", price: "₹4926", originalPrice: "₹4926", image: "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?w=600&auto=format&fit=crop&q=60", model: "/models/table_lamp.glb" },
-    { name: "Floor Lamp", category: "lamps", rating: "★★★★★", price: "₹6597", originalPrice: "₹8267", image: "https://images.unsplash.com/photo-1743578666060-49a1747d61df?w=600&auto=format&fit=crop&q=60", model: "/models/lamp.glb" },
-    { name: "Modern Lamp", category: "lamps", rating: "★★★★☆", price: "₹4926", originalPrice: "₹5762", image: "https://images.unsplash.com/photo-1729825128716-13221811859f?w=600&auto=format&fit=crop&q=60", model: "/models/modern_lamp.glb" },
-    { name: "Vintage Lamp", category: "lamps", rating: "★★★★★", price: "₹6597", originalPrice: "₹8267", image: "https://images.unsplash.com/photo-1667316636895-0346ca648046?w=600&auto=format&fit=crop&q=60", model: "/models/vintage_lamp.glb" },
-    { name: "Desk Lamp", category: "lamps", rating: "★★★★☆", price: "₹3297", originalPrice: "₹4092", image: "https://plus.unsplash.com/premium_photo-1685287731237-d119a3d95711?w=600&auto=format&fit=crop&q=60", model: "/models/new_table_lamp.glb" },
-    { name: "Modern Bed", category: "beds", rating: "★★★★★", price: "₹24967", originalPrice: "₹29152", image: "https://images.unsplash.com/photo-1688384452844-8364c3e2fc28?w=600&auto=format&fit=crop&q=60", model: "/models/modern_bed.glb" },
-    { name: "King Size Bed", category: "beds", rating: "★★★★★", price: "₹33317", originalPrice: "₹37492", image: "https://images.unsplash.com/photo-1592229505678-cf99a9908e03?w=600&auto=format&fit=crop&q=60", model: "/models/king_size.glb" },
-    { name: "Wooden Bed", category: "beds", rating: "★★★★★", price: "₹24967", originalPrice: "₹37492", image: "https://images.unsplash.com/photo-1688384452844-8364c3e2fc28?w=600&auto=format&fit=crop&q=60", model: "/models/wooden_bed.glb" },
-    { name: "Sleek Bed", category: "beds", rating: "★★★★★", price: "₹26637", originalPrice: "₹30812", image: "https://plus.unsplash.com/premium_photo-1670076515907-2736a3492f23?w=600&auto=format&fit=crop&q=60", model: "/models/sleek_bed.glb" },
-    { name: "Minimalist Bed", category: "beds", rating: "★★★★☆", price: "₹23297", originalPrice: "₹27472", image: "https://plus.unsplash.com/premium_photo-1671269943825-e45b177add8f?w=600&auto=format&fit=crop&q=60", model: "/models/minimalist_bed.glb" },
-    { name: "Leather Sofa", category: "sofas", rating: "★★★★★", price: "₹41667", originalPrice: "₹45842", image: "https://images.unsplash.com/photo-1573866926487-a1865558a9cf?w=600&auto=format&fit=crop&q=60", model: "/models//chesterfield-sofa.glb" },
-    { name: "Modern Sofa", category: "sofas", rating: "★★★★★", price: "₹33317", originalPrice: "₹37492", image: "https://images.unsplash.com/photo-1698936061086-2bf99c7b9fc5?w=600&auto=format&fit=crop&q=60", model: "/models/low_poly_modern_sofa_free_model.glb" },
-    { name: "Velvet Sofa", category: "sofas", rating: "★★★★★", price: "₹38327", originalPrice: "₹41667", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&auto=format&fit=crop&q=60", model: "/models/green_velvet_three_seatersofa.glb" },
-    { name: "Compact Sofa", category: "sofas", rating: "★★★★☆", price: "₹29167", originalPrice: "₹32482", image: "https://images.unsplash.com/photo-1647221598498-245f6ed6c720?w=600&auto=format&fit=crop&q=60", model: "/models/compact_sofa.glb" },
-    { name: "L-Shaped Sofa", category: "sofas", rating: "★★★★★", price: "₹50017", originalPrice: "₹54192", image: "https://plus.unsplash.com/premium_photo-1692130314358-30f911957d7f?w=600&auto=format&fit=crop&q=60", model: "/models/L-shape.glb" },
-    { name: "Coffee Table", category: "tables", rating: "★★★★★", price: "₹10767", originalPrice: "₹12442", image: "https://images.unsplash.com/photo-1461418559055-6f020c5a91e7?w=600&auto=format&fit=crop&q=60", model: "/models/bar_table.glb" },
-    { name: "Dining Table", category: "tables", rating: "★★★★★", price: "₹24967", originalPrice: "₹29152", image: "https://images.unsplash.com/photo-1656470176663-1f5ed664e539?w=600&auto=format&fit=crop&q=60", model: "/models/simple_dining_table.glb" },
-    { name: "Side Table", category: "tables", rating: "★★★★☆", price: "₹6597", originalPrice: "₹8267", image: "https://images.unsplash.com/photo-1494949385013-8b57482a0e4f?w=600&auto=format&fit=crop&q=60", model: "/models/ikea_lack_side_table_55x55x45.glb" },
-    { name: "Round Table", category: "tables", rating: "★★★★☆", price: "₹12442", originalPrice: "₹14112", image: "https://plus.unsplash.com/premium_photo-1670869816894-e020bc93b279?w=600&auto=format&fit=crop&q=60", model: "/models/round_table.glb" },
-    { name: "Glass Table", category: "tables", rating: "★★★★★", price: "₹16617", originalPrice: "₹19122", image: "https://images.unsplash.com/photo-1563146413-d915a569d6b1?w=600&auto=format&fit=crop&q=60", model: "/models/round_glass_table.glb" }
+    { name: "Đèn Bàn", category: "lamps", rating: "★★★★★", price: "₫1,477,800", originalPrice: "₫1,477,800", image: "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?w=600&auto=format&fit=crop&q=60", model: "/models/table_lamp.glb" },
+    { name: "Đèn Sàn", category: "lamps", rating: "★★★★★", price: "₫1,979,100", originalPrice: "₫2,480,100", image: "https://images.unsplash.com/photo-1743578666060-49a1747d61df?w=600&auto=format&fit=crop&q=60", model: "/models/lamp.glb" },
+    { name: "Đèn Hiện Đại", category: "lamps", rating: "★★★★☆", price: "₫1,477,800", originalPrice: "₫1,728,600", image: "https://images.unsplash.com/photo-1729825128716-13221811859f?w=600&auto=format&fit=crop&q=60", model: "/models/modern_lamp.glb" },
+    { name: "Đèn Vintage", category: "lamps", rating: "★★★★★", price: "₫1,979,100", originalPrice: "₫2,480,100", image: "https://images.unsplash.com/photo-1667316636895-0346ca648046?w=600&auto=format&fit=crop&q=60", model: "/models/vintage_lamp.glb" },
+    { name: "Đèn Bàn Làm Việc", category: "lamps", rating: "★★★★☆", price: "₫989,100", originalPrice: "₫1,227,600", image: "https://plus.unsplash.com/premium_photo-1685287731237-d119a3d95711?w=600&auto=format&fit=crop&q=60", model: "/models/new_table_lamp.glb" },
+    { name: "Giường Hiện Đại", category: "beds", rating: "★★★★★", price: "₫7,490,100", originalPrice: "₫8,745,600", image: "https://images.unsplash.com/photo-1688384452844-8364c3e2fc28?w=600&auto=format&fit=crop&q=60", model: "/models/modern_bed.glb" },
+    { name: "Giường King Size", category: "beds", rating: "★★★★★", price: "₫9,995,100", originalPrice: "₫11,247,600", image: "https://images.unsplash.com/photo-1592229505678-cf99a9908e03?w=600&auto=format&fit=crop&q=60", model: "/models/king_size.glb" },
+    { name: "Giường Gỗ", category: "beds", rating: "★★★★★", price: "₫7,490,100", originalPrice: "₫11,247,600", image: "https://images.unsplash.com/photo-1688384452844-8364c3e2fc28?w=600&auto=format&fit=crop&q=60", model: "/models/wooden_bed.glb" },
+    { name: "Giường Hiện Đại Kiểu", category: "beds", rating: "★★★★★", price: "₫7,991,100", originalPrice: "₫9,243,600", image: "https://plus.unsplash.com/premium_photo-1670076515907-2736a3492f23?w=600&auto=format&fit=crop&q=60", model: "/models/sleek_bed.glb" },
+    { name: "Giường Tối Giản", category: "beds", rating: "★★★★☆", price: "₫6,989,100", originalPrice: "₫8,241,600", image: "https://plus.unsplash.com/premium_photo-1671269943825-e45b177add8f?w=600&auto=format&fit=crop&q=60", model: "/models/minimalist_bed.glb" },
+    { name: "Sofa Da", category: "sofas", rating: "★★★★★", price: "₫12,500,100", originalPrice: "₫13,752,600", image: "https://images.unsplash.com/photo-1573866926487-a1865558a9cf?w=600&auto=format&fit=crop&q=60", model: "/models//chesterfield-sofa.glb" },
+    { name: "Sofa Hiện Đại", category: "sofas", rating: "★★★★★", price: "₫9,995,100", originalPrice: "₫11,247,600", image: "https://images.unsplash.com/photo-1698936061086-2bf99c7b9fc5?w=600&auto=format&fit=crop&q=60", model: "/models/low_poly_modern_sofa_free_model.glb" },
+    { name: "Sofa Nhung", category: "sofas", rating: "★★★★★", price: "₫11,498,100", originalPrice: "₫12,500,100", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&auto=format&fit=crop&q=60", model: "/models/green_velvet_three_seatersofa.glb" },
+    { name: "Sofa Gọn Nhẹ", category: "sofas", rating: "★★★★☆", price: "₫8,750,100", originalPrice: "₫9,744,600", image: "https://images.unsplash.com/photo-1647221598498-245f6ed6c720?w=600&auto=format&fit=crop&q=60", model: "/models/compact_sofa.glb" },
+    { name: "Sofa Hình Chữ L", category: "sofas", rating: "★★★★★", price: "₫15,005,100", originalPrice: "₫16,257,600", image: "https://plus.unsplash.com/premium_photo-1692130314358-30f911957d7f?w=600&auto=format&fit=crop&q=60", model: "/models/L-shape.glb" },
+    { name: "Bàn Cà Phê", category: "tables", rating: "★★★★★", price: "₫3,230,100", originalPrice: "₫3,732,600", image: "https://images.unsplash.com/photo-1461418559055-6f020c5a91e7?w=600&auto=format&fit=crop&q=60", model: "/models/bar_table.glb" },
+    { name: "Bàn Ăn", category: "tables", rating: "★★★★★", price: "₫7,490,100", originalPrice: "₫8,745,600", image: "https://images.unsplash.com/photo-1656470176663-1f5ed664e539?w=600&auto=format&fit=crop&q=60", model: "/models/simple_dining_table.glb" },
+    { name: "Bàn Phụ", category: "tables", rating: "★★★★☆", price: "₫1,979,100", originalPrice: "₫2,480,100", image: "https://images.unsplash.com/photo-1494949385013-8b57482a0e4f?w=600&auto=format&fit=crop&q=60", model: "/models/ikea_lack_side_table_55x55x45.glb" },
+    { name: "Bàn Tròn", category: "tables", rating: "★★★★☆", price: "₫3,732,600", originalPrice: "₫4,233,600", image: "https://plus.unsplash.com/premium_photo-1670869816894-e020bc93b279?w=600&auto=format&fit=crop&q=60", model: "/models/round_table.glb" },
+    { name: "Bàn Kính", category: "tables", rating: "★★★★★", price: "₫4,985,100", originalPrice: "₫5,736,600", image: "https://images.unsplash.com/photo-1563146413-d915a569d6b1?w=600&auto=format&fit=crop&q=60", model: "/models/round_glass_table.glb" }
   ];
 
   const handleARView = (product) => {
@@ -72,22 +72,31 @@ const Category = () => {
       <div className="search-bar">
         <input
           type="text"
-          placeholder="Search items..."
+          placeholder="Tìm kiếm sản phẩm..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
 
       <div className="category-tabs">
-        {CATEGORIES.map((cat) => (
-          <button
-            key={cat}
-            className={`category-tab ${activeCategory === cat ? "active" : ""}`}
-            onClick={() => handleCategoryChange(cat)}
-          >
-            {cat.charAt(0).toUpperCase() + cat.slice(1)}
-          </button>
-        ))}
+        {CATEGORIES.map((cat) => {
+          const categoryNames = {
+            all: "Tất Cả",
+            lamps: "Đèn",
+            beds: "Giường",
+            sofas: "Sofa",
+            tables: "Bàn"
+          };
+          return (
+            <button
+              key={cat}
+              className={`category-tab ${activeCategory === cat ? "active" : ""}`}
+              onClick={() => handleCategoryChange(cat)}
+            >
+              {categoryNames[cat] || cat.charAt(0).toUpperCase() + cat.slice(1)}
+            </button>
+          );
+        })}
       </div>
 
       <div className="products-grid">
@@ -107,11 +116,11 @@ const Category = () => {
                 <span className="original-price">{product.originalPrice}</span>
               </p>
               <div className="product-actions">
-                {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart(product)}>Add to Cart</button>}
+                {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart(product)}>Thêm vào Giỏ</button>}
                 <button className="ar-button" onClick={() => handleARView(product)}>
                   <img
                     src="/models/cube_838538.png"
-                    alt="AR View"
+                    alt="Xem AR"
                     style={{ width: "24px", height: "24px", verticalAlign: "middle" }}
                   />
                 </button>
@@ -134,7 +143,7 @@ const Category = () => {
                 {selectedProduct.price}{" "}
                 <span className="original-price">{selectedProduct.originalPrice}</span>
               </p>
-              <p>{selectedProduct.description || "Hurry Up! Sale is Over in 2-Hours."}</p>
+              <p>{selectedProduct.description || "Hãy Nhanh Lên! Đợt Sale Kết Thúc Trong 2 Giờ."}</p>
             </div>
             <model-viewer
               src={selectedProduct.model}
@@ -147,9 +156,9 @@ const Category = () => {
               shadow-intensity="1"
               style={{ width: "100%", height: "500px" }}
             >
-              <div slot="ar-prompt">Move your device slowly to detect a plane...</div>
+              <div slot="ar-prompt">Di chuyển thiết bị của bạn từ từ để phát hiện mặt phẳng...</div>
               <button slot="ar-button" className="ar-activate-button">
-                View in AR
+                Xem Trên AR
               </button>
             </model-viewer>
           </div>
