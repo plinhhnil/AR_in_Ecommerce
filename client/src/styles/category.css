@@ -298,6 +298,19 @@
   justify-content: space-between;
   margin-top: 10px;
 }
+
+.product-description {
+  background-color: #B3E5FC;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-description h3 {
+  color: #8B6F47;
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
 .add-to-cart {
   padding: 8px 12px;
   background-color: #5C4033;
