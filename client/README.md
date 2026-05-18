@@ -1,3 +1,34 @@
+
+# Cách chạy chính thức
+1. Cài dependency backend
+Ở thư mục root: npm install
+
+2. Nếu là lần đầu chạy, tạo file .env ngay folder chính dự án
+(*) Cách lấy MongoDB URL đúng: Vào MongoDB Atlas
+Vào Database
+Chọn cluster của bạn, hoặc tạo mới nếu dùng lần đầu. Thêm IP nếu lần đầu dùng 1 mạng nào đó để chạy.
+Bấm Connect
+Chọn Drivers
+Copy connection string cho Node.js
+Thay <db_password> bằng password database user của bạn (khi đkí)
+Thêm database name, ví dụ /ecommerce_ar
+Tạo hoặc sửa file .env trong thư mục root, dùng MongoDB Atlas:
+PORT=8080
+MONGO_URL=mongodb+srv://<username>:<password>@<cluster-url>/ecommerce
+JWT_SECRET=your_strong_secret_here
+Backend gọi dotenv.config(), kết nối MongoDB qua process.env.MONGO_URL, rồi chạy server ở process.env.PORT || 8080.
+Nếu là mỗi lần chạy code, sửa lại .env cho đúng với URL MongoDB của mình.
+
+3. Cài dependency frontend
+cd client
+npm install
+cd ..
+4. Chạy cả frontend và backend
+Từ thư mục root: npm run dev. Follow link sinh ra, thường là mở ở http://localhost:3000.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

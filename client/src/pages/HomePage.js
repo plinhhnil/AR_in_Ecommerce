@@ -69,65 +69,12 @@ const HomePage = () => {
         </Carousel.Item>
       </Carousel>
 
-      {/* Categories Section */}
-      <div className="categories-section">
-        <div style={{ textAlign: "left", padding: "0 20px", maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ color: "#8B4513", backgroundColor: "#E8F5E9", padding: "10px 20px", display: "inline-block", borderRadius: "8px", margin: "20px 0" }}>Categories</h2>
-        </div>
-        <div className="categories-grid">
-          <div className="category-box" onClick={() => navigate("/category?type=beds")} style={{ cursor: "pointer" }}>
-            <img
-              className="category-image"
-              src="/images/bed_1.jpg"
-              alt="Beds"
-              style={{ height: "250px", objectFit: "cover", width: "100%" }}
-            />
-            <div className="category-text">
-              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Beds</p>
-            </div>
-          </div>
-          <div className="category-box" onClick={() => navigate("/category?type=sofas")} style={{ cursor: "pointer" }}>
-            <img
-              className="category-image"
-              src="/images/n_sofa.jpg"
-              alt="Sofas"
-              style={{ height: "250px", objectFit: "cover", width: "100%" }}
-            />
-            <div className="category-text">
-              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Sofas</p>
-            </div>
-          </div>
-          <div className="category-box" onClick={() => navigate("/category?type=tables")} style={{ cursor: "pointer" }}>
-            <img
-              className="category-image"
-              src="/images/cabinet.jpg"
-              alt="Tables"
-              style={{ height: "250px", objectFit: "cover", width: "100%" }}
-            />
-            <div className="category-text">
-              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Tables</p>
-            </div>
-          </div>
-          <div className="category-box" onClick={() => navigate("/category?type=lamps")} style={{ cursor: "pointer" }}>
-            <img
-              className="category-image"
-              src="/images/etienne-girardet-NGb91VwnOWY-unsplash.jpg"
-              alt="Lamps"
-              style={{ height: "250px", objectFit: "cover", width: "100%" }}
-            />
-            <div className="category-text">
-              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Lamps</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Trending Now Section */}
       <div className="trending-section">
-        <div className="trending-header" style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "20px", marginBottom: "20px", backgroundColor: "#E8F5E9", padding: "10px 20px", borderRadius: "8px" }}>
+        <div className="trending-header" style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "20px", marginBottom: "20px", backgroundColor: "#DFF4D6", padding: "10px 20px", borderRadius: "8px" }}>
           <h2 style={{ color: "#8B4513", margin: 0, flex: "none", textAlign: "left" }}>Top Choices</h2>
-          <button className="browse-shop" onClick={handleBrowseShop} style={{ position: "static", backgroundColor: "#4CAF50", color: "white", fontWeight: "bold", padding: "8px 20px", borderRadius: "25px", border: "none" }}>
-            Browse Shop <span>»</span>
+          <button className="browse-shop" onClick={handleBrowseShop} style={{ position: "static", backgroundColor: "#ff6b8a", color: "white", fontWeight: "bold", padding: "8px 20px", borderRadius: "25px", border: "none" }}>
+            Explore
           </button>
         </div>
         <div className="trending-grid">
@@ -165,6 +112,59 @@ const HomePage = () => {
               <div className="trending-rating">★★★★☆</div>
               <p className="trending-price">₹3900 <span className="original-price">$110.00</span></p>
               {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Tallest Chair", price: "₹3900", image: "/images/table2.jpg" })}>Add to Cart</button>}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Categories Section */}
+      <div className="categories-section">
+        <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center", gap: "20px", margin: "0 auto 20px", backgroundColor: "#DFF4D6", padding: "10px 20px", borderRadius: "8px", maxWidth: "1200px", width: "90vw" }}>
+          <h2 style={{ color: "#8B4513", margin: 0, flex: "none", textAlign: "left" }}>Our Productline</h2>
+        </div>
+        <div className="categories-grid">
+          <div className="category-box" onClick={() => navigate("/category?type=sofas")} style={{ cursor: "pointer" }}>
+            <img
+              className="category-image"
+              src="/images/n_sofa.jpg"
+              alt="Sofa"
+              style={{ height: "250px", objectFit: "cover", width: "100%" }}
+            />
+            <div className="category-text">
+              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Sofa</p>
+            </div>
+          </div>
+          <div className="category-box" onClick={() => navigate("/category?type=beds")} style={{ cursor: "pointer" }}>
+            <img
+              className="category-image"
+              src="/images/bed_1.jpg"
+              alt="Bed"
+              style={{ height: "250px", objectFit: "cover", width: "100%" }}
+            />
+            <div className="category-text">
+              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Bed</p>
+            </div>
+          </div>
+          <div className="category-box" onClick={() => navigate("/category?type=lamps")} style={{ cursor: "pointer" }}>
+            <img
+              className="category-image"
+              src="/images/etienne-girardet-NGb91VwnOWY-unsplash.jpg"
+              alt="Lamp"
+              style={{ height: "250px", objectFit: "cover", width: "100%" }}
+            />
+            <div className="category-text">
+              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Lamp</p>
+            </div>
+          </div>
+          <div className="category-box" onClick={() => navigate("/category?type=tables")} style={{ cursor: "pointer" }}>
+            <img
+              className="category-image"
+              src="/images/cabinet.jpg"
+              alt="Table"
+              style={{ height: "250px", objectFit: "cover", width: "100%" }}
+            />
+            <div className="category-text">
+              <p style={{ fontSize: "1.2rem", fontWeight: "bold", margin: "0" }}>Table</p>
             </div>
           </div>
         </div>
