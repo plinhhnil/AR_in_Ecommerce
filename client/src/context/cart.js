@@ -1,29 +1,28 @@
-import { useState, useEffect, useContext, createContext } from "react";
+import React, { useState, useEffect, useContext, createContext } from "react";
 
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  // Load cart from localStorage on mount
+  // Đọc giỏ hàng từ localStorage khi ứng dụng tải lần đầu
   useEffect(() => {
-    const data = localStorage.getItem("cart");
-    if (data) {
+    const existingCart = localStorage.getItem("cart");
+    if (existingCart) {
       try {
-        const parsedData = JSON.parse(data);
-        if (Array.isArray(parsedData)) setCart(parsedData);
-      } catch (err) {
-        console.log("Failed to parse cart from localStorage", err);
+        setCart(JSON.parse(existingCart));
+      } catch (error) {
+        console.error("Lỗi khi đọc giỏ hàng từ localStorage:", error);
       }
     }
   }, []);
 
-  // Sync cart to localStorage whenever it changes
+  // Lưu giỏ hàng vào localStorage mỗi khi có thay đổi
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  // Add product to cart (increase quantity if already exists)
+  // Thêm sản phẩm vào giỏ hàng
   const addToCart = (product) => {
     setCart((prev) => {
       const existing = prev.find((item) => item.name === product.name);
@@ -38,12 +37,12 @@ const CartProvider = ({ children }) => {
     });
   };
 
-  // Remove product from cart
+  // Xóa sản phẩm khỏi giỏ hàng
   const removeFromCart = (productName) => {
     setCart((prev) => prev.filter((item) => item.name !== productName));
   };
 
-  // Update quantity of a product
+  // Cập nhật số lượng sản phẩm
   const updateQuantity = (productName, quantity) => {
     if (quantity <= 0) {
       removeFromCart(productName);
@@ -56,23 +55,31 @@ const CartProvider = ({ children }) => {
     );
   };
 
-  // Clear all items from cart
+  // Xóa toàn bộ giỏ hàng
   const clearCart = () => {
     setCart([]);
   };
 
-  // Total item count
-  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+  // Đếm tổng số lượng sản phẩm
+  const cartCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
 
   return (
-    <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart, cartCount }}
+    <CartContext.Provider 
+      value={{ 
+        cart, setCart, // export luôn setCart đề phòng cần thiết
+        addToCart, 
+        removeFromCart, 
+        updateQuantity, 
+        clearCart, 
+        cartCount 
+      }}
     >
       {children}
     </CartContext.Provider>
   );
 };
 
+// Custom hook
 const useCart = () => useContext(CartContext);
 
 export { useCart, CartProvider };
