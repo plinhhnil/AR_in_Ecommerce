@@ -27,8 +27,8 @@
 }
 
 .chatbot-window {
-  width: 350px;
-  height: 480px;
+  width: 370px;
+  height: 540px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
@@ -100,6 +100,36 @@
   align-self: flex-end;
   border-bottom-right-radius: 4px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Quick-reply suggestion chips */
+.chatbot-quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 12px;
+  border-top: 1px solid #f0f0f0;
+  background: #fafafa;
+  max-height: 90px;
+  overflow-y: auto;
+}
+
+.quick-reply-btn {
+  background: white;
+  border: 1.5px solid #2E4A3D;
+  color: #2E4A3D;
+  border-radius: 14px;
+  padding: 4px 11px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.quick-reply-btn:hover {
+  background: #2E4A3D;
+  color: #fff;
 }
 
 .chatbot-input {

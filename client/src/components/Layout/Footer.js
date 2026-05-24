@@ -1,27 +1,29 @@
-
 import React from 'react';
 import '../../styles/footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer" style={{ backgroundColor: "#2E4A3D", padding: "2rem 1rem", minHeight: "15vh", display: "flex", alignItems: "center" }}>
-      <div className="container-fluid" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", width: "100%", padding: "0 2rem" }}>
-        {/* Left Side: Logo and Copyright */}
-        <div style={{ display: "flex", alignItems: "center", gap: "30px", flexWrap: "wrap" }}>
-          <div className="footer-logo" style={{ display: "flex", alignItems: "center", gap: "10px", margin: 0 }}>
-            <img src="/images/logo_nhaminh.png" alt="Nhà Mình Logo" style={{ height: "40px" }} />
-            <span style={{ color: '#c85a40', fontWeight: 'bold', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', textTransform: 'lowercase', fontSize: '1.5rem' }}>nhà mình</span>
+    <footer className="footer">
+      <div className="footer-inner">
+
+        {/* Trái: logo + bản quyền */}
+        <div className="footer-left">
+          <div className="footer-logo">
+            <img src="/images/logo_nhaminh.png" alt="Nhà Mình Logo" />
+            <span className="footer-logo-text">nhà mình</span>
           </div>
-          <div className="footer-copyright" style={{ color: "#FFF", margin: 0 }}>
-            Bản quyền © {new Date().getFullYear()} <span style={{ color: '#c85a40', fontWeight: 'bold', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', textTransform: 'lowercase' }}>nhà mình</span>
-          </div>
+          <p className="footer-copyright">
+            Bản quyền &copy; {new Date().getFullYear()}&nbsp;
+            <span className="footer-copyright-brand">nhà mình</span>
+          </p>
         </div>
 
-        {/* Right Side: Links */}
-        <div className="footer-links" style={{ display: "flex", gap: "20px", margin: 0 }}>
-          <a href="/about" style={{ color: "#FFF", textDecoration: "none" }}>Giới Thiệu</a>
-          <a href="/contact" style={{ color: "#FFF", textDecoration: "none" }}>Liên Hệ</a>
+        {/* Phải: điều hướng */}
+        <div className="footer-links">
+          <a href="/about">Giới Thiệu</a>
+          <a href="/contact">Liên Hệ</a>
         </div>
+
       </div>
     </footer>
   );

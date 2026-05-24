@@ -40,7 +40,7 @@ const Register = () => {
   return (
     <div className="form-container ">
       <form onSubmit={handleSubmit}>
-        <h4 className="title">BIỂU MẫU ĐĂNG KÝ</h4>
+        <h4 className="title">Đăng Ký</h4>
         <div className="mb-3">
           <input
             type="text"

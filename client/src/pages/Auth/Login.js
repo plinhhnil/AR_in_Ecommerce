@@ -42,7 +42,7 @@ const Login = () => {
   return (
     <div className="form-container ">
       <form onSubmit={handleSubmit}>
-        <h4 className="title">BIỂU MẫU ĐĂNG NHẬP</h4>
+        <h4 className="title">Đăng Nhập</h4>
 
         <div className="mb-3">
           <input

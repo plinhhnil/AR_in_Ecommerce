@@ -5,6 +5,13 @@
   overflow: hidden;
 }
 
+/* Ép Bootstrap carousel wrapper không cao hơn nội dung */
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+
 .carousel-text {
   position: absolute;
   top: 50%;
@@ -18,13 +25,15 @@
 }
 
 .carousel-text h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0;
   line-height: 1.2;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  text-transform: none;
+  white-space: nowrap;
+  color: #9CCC65; /* xanh lá mạ */
 }
 
 .carousel-text p {
@@ -71,8 +80,9 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
   max-width: 1400px;
-  margin: 0 auto;
   width: 90vw;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .category-box {
@@ -101,11 +111,11 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  background: linear-gradient(135deg, #ff5f8f 0%, #ff6b6b 100%);
+  background: #2E4A3D; /* xanh lá đậm giống footer */
   padding: 10px 18px;
   border-radius: 999px;
   color: #fff;
-  box-shadow: 0 8px 18px rgba(255, 95, 143, 0.28);
+  box-shadow: 0 8px 18px rgba(46, 74, 61, 0.35);
 }
 
 .category-text p {
@@ -116,29 +126,25 @@
   letter-spacing: 0.5px;
 }
 
+/* ── Section header bar (dùng chung cho Trending & Categories) ── */
+.section-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  width: 90vw;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  background-color: #DFF4D6;
+  border-radius: 8px;
+}
+
 /* Trending Section */
 .trending-section {
   padding: 40px 0;
   text-align: center;
   background: #fff;
-}
-
-.trending-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto 20px;
-  padding: 0 20px;
-  position: relative;
-}
-
-.trending-header h2 {
-  font-size: 2rem;
-  color: #333;
-  margin: 0;
-  flex: 1;
-  text-align: center;
 }
 
 .browse-shop {
@@ -149,8 +155,6 @@
   font-size: 1rem;
   color: #333;
   transition: background 0.3s;
-  position: absolute;
-  right: 20px;
 }
 
 .browse-shop:hover {
@@ -162,9 +166,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1400px;
+  width: 90vw;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .trending-item {
@@ -183,7 +188,7 @@
 
 .trending-details {
   padding: 10px;
-  background-color: #E3F2FD;
+  background-color: #FFFDE7; /* vàng nhạt */
 }
 
 .trending-title {
@@ -343,11 +348,19 @@
   }
 
   .carousel-text h1 {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    white-space: normal;
   }
 
   .carousel-text p {
     font-size: 1rem;
+  }
+
+  /* ── Căn đều: header bar + grid cùng width trên mobile ── */
+  .section-header {
+    width: 95vw;
+    padding: 10px 14px;
+    margin: 0 auto 14px;
   }
 
   /* Categories Section */
@@ -356,9 +369,10 @@
   }
 
   .categories-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr;
     gap: 10px;
     width: 95vw;
+    padding: 0;
   }
 
   .category-box {
@@ -374,15 +388,6 @@
     padding: 20px 0;
   }
 
-  .trending-header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .trending-header h2 {
-    font-size: 1.5rem;
-  }
-
   .browse-shop {
     position: static;
     font-size: 0.9rem;
@@ -390,9 +395,10 @@
   }
 
   .trending-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr;
     gap: 15px;
-    padding: 0 10px;
+    width: 95vw;
+    padding: 0;
   }
 
   .trending-image {
@@ -450,7 +456,8 @@
   }
 
   .carousel-text h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    white-space: normal;
   }
 
   .carousel-text p {

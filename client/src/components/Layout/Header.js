@@ -113,11 +113,13 @@ const Header = () => {
                   </li>
                 </>
               )}
-              <li className="nav-item">
-                <NavLink to="/cart" className="nav-link" style={navLinkStyle}>
-                  Giỏ Hàng ({cartCount})
-                </NavLink>
-              </li>
+              {auth?.user && (
+                <li className="nav-item">
+                  <NavLink to="/cart" className="nav-link" style={navLinkStyle}>
+                    Giỏ Hàng ({cartCount})
+                  </NavLink>
+                </li>
+              )}
             </ul>
           </div>
         </div>
