@@ -42,8 +42,8 @@ const HomePage = () => {
               style={{ height: "85vh", objectFit: "cover" }}
             />
             <div className="carousel-text">
-              <h1>Giảm Giá Lớn Đang Chờ!</h1>
-              <p>Khám Phá Những Ưu Đãi Không Thể Bỏ Lỡ Về Nội Thất</p>
+              <h1>Mặt Hàng Nội Thất Đang Hot</h1>
+              <p>Xem Ngay!</p>
             </div>
           </div>
         </Carousel.Item>
@@ -124,7 +124,7 @@ const HomePage = () => {
             <div className="trending-details">
               <p className="trending-title">Ghế Hiện Đại</p>
               <div className="trending-rating">★★★★☆</div>
-              <p className="trending-price">₫72,500,000 <span className="original-price">$2,900</span></p>
+              <p className="trending-price">₫72,500,000</p>
               {isLoggedIn && (
                 <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Ghế Hiện Đại", price: "₫72,500,000", image: "/images/n_chair.jpg" })}>
                   Thêm vào Giỏ
@@ -137,7 +137,7 @@ const HomePage = () => {
             <div className="trending-details">
               <p className="trending-title">Bàn Cà Phê</p>
               <div className="trending-rating">★★★★★</div>
-              <p className="trending-price">₫87,500,000 <span className="original-price">$3,500</span></p>
+              <p className="trending-price">₫87,500,000</p>
               {isLoggedIn && (
                 <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Bàn Cà Phê", price: "₫87,500,000", image: "/images/dinning.jpg" })}>
                   Thêm vào Giỏ
@@ -150,7 +150,7 @@ const HomePage = () => {
             <div className="trending-details">
               <p className="trending-title">Ghế Cao Nhất</p>
               <div className="trending-rating">★★★★☆</div>
-              <p className="trending-price">₫97,500,000 <span className="original-price">$3,900</span></p>
+              <p className="trending-price">₫97,500,000</p>
               {isLoggedIn && (
                 <button className="add-to-cart" onClick={() => handleAddToCart({ name: "Ghế Cao Nhất", price: "₫97,500,000", image: "/images/table2.jpg" })}>
                   Thêm vào Giỏ

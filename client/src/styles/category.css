@@ -324,17 +324,19 @@
   background-color: #3E2723;
 }
 .ar-button {
-  padding: 8px;
-  background-color: #fdfbfb;
-  border: none;
-  border-radius: 4px;
+  padding: 8px 10px;
+  background-color: #E8F5C8;       /* nền xanh lá mạ nhạt */
+  border: 2px solid #9CCC65;       /* viền xanh lá mạ */
+  border-radius: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 .ar-button:hover {
-  background-color: #0056b3;
+  background-color: #c8e89c;       /* đậm hơn khi hover */
+  border-color: #7CB342;
 }
 .ar-button svg {
   width: 24px;

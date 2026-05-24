@@ -53,13 +53,44 @@
 .carousel-control-prev,
 .carousel-control-next {
   z-index: 20;
-  opacity: 0.7;
+  opacity: 0.85;
+  width: 48px;
   transition: opacity 0.3s;
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   opacity: 1;
+}
+
+/* Mũi tên trái — nét dày stroke-width 2.8, màu xanh đậm #2E4A3D */
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='%239CCC65' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round' fill='none' d='M10 2L4 8l6 6'/%3E%3C/svg%3E");
+  background-color: transparent;
+  filter: none;
+}
+
+/* Mũi tên phải — nét dày stroke-width 2.8, màu xanh đậm #2E4A3D */
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='%239CCC65' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round' fill='none' d='M6 2l6 6-6 6'/%3E%3C/svg%3E");
+  background-color: transparent;
+  filter: none;
+}
+
+/* Nút ngang chuyển slide (indicators) — dày 5px, xanh lá mạ */
+.carousel-indicators [data-bs-target] {
+  background-color: #9CCC65;
+  height: 5px;
+  width: 28px;
+  border-radius: 3px;
+  opacity: 0.6;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: #9CCC65;
+  opacity: 1;
+  width: 36px;
 }
 
 /* Categories Section */

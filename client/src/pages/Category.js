@@ -111,10 +111,7 @@ const Category = () => {
             <div className="product-details">
               <h3>{product.name}</h3>
               <div className="product-rating">{product.rating}</div>
-              <p className="product-price">
-                {product.price}{" "}
-                <span className="original-price">{product.originalPrice}</span>
-              </p>
+              <p className="product-price">{product.price}</p>
               <div className="product-actions">
                 {isLoggedIn && <button className="add-to-cart" onClick={() => handleAddToCart(product)}>Thêm vào Giỏ</button>}
                 <button className="ar-button" onClick={() => handleARView(product)}>
@@ -139,10 +136,7 @@ const Category = () => {
             <div className="product-description">
               <h3>{selectedProduct.name}</h3>
               <div className="product-rating">{selectedProduct.rating}</div>
-              <p className="product-price">
-                {selectedProduct.price}{" "}
-                <span className="original-price">{selectedProduct.originalPrice}</span>
-              </p>
+              <p className="product-price">{selectedProduct.price}</p>
               {selectedProduct.description && <p>{selectedProduct.description}</p>}
             </div>
             <model-viewer
