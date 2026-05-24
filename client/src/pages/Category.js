@@ -143,7 +143,7 @@ const Category = () => {
                 {selectedProduct.price}{" "}
                 <span className="original-price">{selectedProduct.originalPrice}</span>
               </p>
-              <p>{selectedProduct.description || "Hãy Nhanh Lên! Đợt Sale Kết Thúc Trong 2 Giờ."}</p>
+              {selectedProduct.description && <p>{selectedProduct.description}</p>}
             </div>
             <model-viewer
               src={selectedProduct.model}
