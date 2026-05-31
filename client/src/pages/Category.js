@@ -28,6 +28,10 @@ const Category = () => {
   };
 
   const handleAddToCart = (product) => {
+    if (!isLoggedIn) {
+      toast.error("Vui lòng đăng nhập để sử dụng giỏ hàng");
+      return;
+    }
     addToCart(product);
     toast.success(`${product.name} được thêm vào giỏ hàng!`);
   };

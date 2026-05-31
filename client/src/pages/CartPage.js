@@ -1,10 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart";
+import { useAuth } from "../context/auth";
 import "../styles/CartPage.css";
 
 const CartPage = () => {
   const { cart, removeFromCart, updateQuantity, clearCart, cartCount } = useCart();
+  const [auth] = useAuth();
   const navigate = useNavigate();
 
   // Parse price string like "₹4926" to number 4926
@@ -17,6 +19,20 @@ const CartPage = () => {
     (sum, item) => sum + parsePrice(item.price) * item.quantity,
     0
   );
+
+  if (!auth?.token) {
+    return (
+      <div className="cart-page">
+        <h2>Giỏ Hàng</h2>
+        <div className="empty-cart">
+          <p>Vui lòng đăng nhập để sử dụng giỏ hàng.</p>
+          <button className="browse-btn" onClick={() => navigate("/login", { state: "/cart" })}>
+            Đăng Nhập
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (cart.length === 0) {
     return (

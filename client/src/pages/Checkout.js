@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart";
+import { useAuth } from "../context/auth";
 import "../styles/Checkout.css";
 
 const Checkout = () => {
   const { cart, clearCart } = useCart();
+  const [auth] = useAuth();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: "",
@@ -24,6 +26,20 @@ const Checkout = () => {
     (sum, item) => sum + parsePrice(item.price) * item.quantity,
     0
   );
+
+  if (!auth?.token) {
+    return (
+      <div className="checkout-page" style={{ justifyContent: "center", alignItems: "center" }}>
+        <div style={{ textAlign: "center" }}>
+          <h2>Vui Lòng Đăng Nhập</h2>
+          <p>Bạn cần đăng nhập để tiếp tục thanh toán.</p>
+          <button className="place-order-btn" style={{ width: "auto", padding: "10px 20px" }} onClick={() => navigate("/login", { state: "/checkout" })}>
+            Đăng Nhập
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

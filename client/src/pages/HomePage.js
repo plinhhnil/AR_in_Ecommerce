@@ -148,7 +148,7 @@ const HomePage = () => {
               )}
             </div>
           </div>
-          <div className="office-chair-6">
+          <div className="trending-item">
             <img src="/images/office-chair-6.jpg" alt="Ghế văn phòng" className="trending-image" />
             <div className="trending-details">
               <p className="trending-title">Ghế văn phòng</p>
