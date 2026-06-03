@@ -55,19 +55,11 @@ Dự án được tổ chức thành các thư mục sau:
 
 1. Sao chép kho lưu trữ bằng lệnh `git clone`.
 2. Cài đặt các phụ thuộc bằng lệnh `npm install`.
-3. Khởi động ứng dụng bằng lệnh `npm start`.
+3. Khởi động ứng dụng bằng lệnh `npm run dev`.
 4. Mở trình duyệt web và điều hướng tới `http://localhost:3000`.
 5. Để xây dựng ứng dụng cho môi trường sản xuất (production), hãy sử dụng `npm run build`.
 6. Để triển khai ứng dụng, hãy sử dụng một công cụ như `create-react-app` hoặc một tập lệnh triển khai tùy chỉnh.
 
-# Hướng dẫn kiểm tra (Testing)
-
-Để chạy các bài kiểm tra, hãy làm theo các bước sau:
-
-1. Cài đặt các phụ thuộc bằng lệnh `npm install`.
-2. Chạy kiểm tra bằng lệnh `npm run test`.
-3. Để chạy một bài kiểm tra cụ thể, hãy sử dụng `npm run test -- <test-name>`.
-4. Để tạo báo cáo mức độ bao phủ của kiểm tra, hãy sử dụng `npm run test:coverage`.
 
 # Ảnh chụp màn hình
 
