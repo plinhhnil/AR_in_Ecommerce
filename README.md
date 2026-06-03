@@ -1,5 +1,5 @@
 
-**Nhà Mình** - _Một ứng dụng thương mại điện tử hiện đại được xây dựng bằng React, mang lại trải nghiệm mua sắm liền mạch cho người dùng._
+> **Nhà Mình** - _Một ứng dụng thương mại điện tử hiện đại được xây dựng bằng React, mang lại trải nghiệm mua sắm liền mạch cho người dùng._
 
 # Mô tả
 
@@ -49,30 +49,76 @@ Dự án được tổ chức thành các thư mục sau:
 - `context`: Chứa các context provider, quản lý trạng thái và cung cấp trạng thái đó cho các thành phần.
 - `tests`: Chứa các bài kiểm tra cho ứng dụng, bao gồm kiểm tra đơn vị (unit tests) và kiểm tra tích hợp (integration tests).
 
-# Cách chạy
+# Cài đặt dự án
+## 1. Clone mã nguồn
+```bash
+git clone <repository-url>
+cd <project-folder>
+```
 
-Để chạy ứng dụng, hãy làm theo các bước sau:
+## 2. Cấu hình Environment Variables
+Tạo file `.env` tại thư mục gốc của dự án:
+```env
+PORT=8080
+MONGO_URL=mongodb+srv://<username>:<password>@<cluster-url>/ecommerce
+JWT_SECRET=your_strong_secret_here
+```
 
-1. Sao chép kho lưu trữ bằng lệnh `git clone`.
-2. Cài đặt các phụ thuộc bằng lệnh `npm install`.
-3. Khởi động ứng dụng bằng lệnh `npm run dev`.
-4. Mở trình duyệt web và điều hướng tới `http://localhost:3000`.
-5. Để xây dựng ứng dụng cho môi trường sản xuất (production), hãy sử dụng `npm run build`.
-6. Để triển khai ứng dụng, hãy sử dụng một công cụ như `create-react-app` hoặc một tập lệnh triển khai tùy chỉnh.
+### Lấy MONGO_URL từ MongoDB Atlas
+1. Đăng nhập MongoDB Atlas.
+2. Chọn Database Cluster.
+3. Chọn **Connect**.
+4. Chọn **Drivers (Node.js)**.
+5. Sao chép Connection String.
+6. Thay thế:
+* `<username>` bằng tên người dùng MongoDB.
+* `<password>` bằng mật khẩu.
+* Thêm tên database ở cuối URL.
+Ví dụ:
+
+```text
+mongodb+srv://admin:mypassword@cluster0.mongodb.net/ecommerce
+```
+
+## 3. Cài đặt Dependencies
+### Backend
+```bash
+npm install
+```
+
+### Frontend
+```bash
+cd client
+npm install
+cd ..
+```
+
+# Chạy ứng dụng
+## Development Mode
+Khởi chạy đồng thời Frontend và Backend:
+
+```bash
+npm run dev
+```
+
+### Địa chỉ truy cập
+
+| Dịch vụ  | URL                   |
+| -------- | --------------------- |
+| Frontend | http://localhost:3000 |
+| Backend  | http://localhost:8080 |
+
+## Production Mode
+### Build ứng dụng
+
+```bash
+npm run build
+```
 
 
-# Ảnh chụp màn hình
-
-Dưới đây là một số ảnh chụp màn hình của ứng dụng:
-
-- **Trang chủ**: [chèn ảnh chụp màn hình trang chủ]
-- **Trang sản phẩm**: [chèn ảnh chụp màn hình trang sản phẩm]
-- **Giỏ hàng**: [chèn ảnh chụp màn hình giỏ hàng]
 
 # Tài liệu tham khảo API
-
 Ứng dụng sử dụng các API sau:
-
 - **Product API**: `https://example.com/api/products`
 - **Order API**: `https://example.com/api/orders`
 - **User API**: `https://example.com/api/users`
