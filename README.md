@@ -115,10 +115,3 @@ npm run dev
 npm run build
 ```
 
-
-
-# Tài liệu tham khảo API
-Ứng dụng sử dụng các API sau:
-- **Product API**: `https://example.com/api/products`
-- **Order API**: `https://example.com/api/orders`
-- **User API**: `https://example.com/api/users`
