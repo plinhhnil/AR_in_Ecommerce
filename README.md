@@ -1,5 +1,5 @@
 
-**Nhà Mình** - Một ứng dụng thương mại điện tử hiện đại được xây dựng bằng React, mang lại trải nghiệm mua sắm liền mạch cho người dùng._
+**Nhà Mình** - _Một ứng dụng thương mại điện tử hiện đại được xây dựng bằng React, mang lại trải nghiệm mua sắm liền mạch cho người dùng._
 
 # Mô tả
 
