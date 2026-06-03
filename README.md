@@ -1,103 +1,88 @@
-🚀 Project Title & Tagline
-==========================
+# Tiêu đề dự án & Khẩu hiệu
 
-**E-commerce Website** 🛍️
-*A modern e-commerce application built with React, providing a seamless shopping experience for users.*
+**Nhà Mình**
+_Một ứng dụng thương mại điện tử hiện đại được xây dựng bằng React, mang lại trải nghiệm mua sắm liền mạch cho người dùng._
 
-📖 Description
-==============
+# Mô tả
 
-The E-commerce Website is a fully functional online shopping platform, designed to provide users with a user-friendly interface for browsing and purchasing products. The application features a responsive design, allowing users to access the website from various devices, including desktops, laptops, tablets, and mobile phones. The website is built using React, a popular JavaScript library, and utilizes various tools and technologies to ensure a smooth and efficient user experience.
+Nhà Mình là một nền tảng mua sắm trực tuyến đầy đủ chức năng, được thiết kế để cung cấp cho người dùng một giao diện thân thiện nhằm duyệt và mua sản phẩm. Ứng dụng có thiết kế đáp ứng, cho phép người dùng truy cập trang web từ nhiều thiết bị khác nhau, bao gồm máy tính để bàn, máy tính xách tay, máy tính bảng và điện thoại di động. Trang web được xây dựng bằng React, một thư viện JavaScript phổ biến và sử dụng nhiều công cụ cũng như công nghệ khác nhau để đảm bảo trải nghiệm người dùng mượt mà và hiệu quả.
 
-The website includes several key features, such as user authentication, product categorization, shopping cart management, and payment processing. The application is designed to be scalable, allowing for easy integration of new features and functionality as needed. The website is also optimized for search engines, making it easily discoverable by potential customers.
+Trang web bao gồm một số tính năng chính, chẳng hạn như xác thực người dùng, phân loại sản phẩm, quản lý giỏ hàng và xử lý thanh toán. Ứng dụng được thiết kế để có thể mở rộng, cho phép dễ dàng tích hợp các tính năng và chức năng mới khi cần. Trang web cũng được tối ưu hóa cho các công cụ tìm kiếm, giúp khách hàng tiềm năng dễ dàng khám phá.
 
-The E-commerce Website is a comprehensive solution for businesses looking to establish an online presence and reach a wider audience. With its modern design, intuitive interface, and robust features, the website provides an ideal platform for users to browse and purchase products, while also providing businesses with a powerful tool for managing their online sales and marketing efforts.
+Nhà Mình là một giải pháp toàn diện cho các doanh nghiệp muốn thiết lập sự hiện diện trực tuyến và tiếp cận lượng khán giả rộng lớn hơn. Với thiết kế hiện đại, giao diện trực quan và các tính năng mạnh mẽ, trang web cung cấp một nền tảng lý tưởng để người dùng duyệt và mua sản phẩm, đồng thời cung cấp cho các doanh nghiệp một công cụ mạnh mẽ để quản lý nỗ lực bán hàng và tiếp thị trực tuyến của họ.
 
-The application is built using a modular architecture, with separate components for each feature, making it easy to maintain and update. The website also includes a robust testing framework, ensuring that the application is thoroughly tested and validated before deployment. With its emphasis on user experience, scalability, and maintainability, the E-commerce Website is an excellent choice for businesses looking to establish a strong online presence.
+Ứng dụng được xây dựng theo kiến trúc mô-đun, với các thành phần riêng biệt cho từng tính năng, giúp dễ dàng bảo trì và cập nhật. Trang web cũng bao gồm một khuôn khổ thử nghiệm mạnh mẽ, đảm bảo rằng ứng dụng được thử nghiệm và xác thực kỹ lưỡng trước khi triển khai. Với trọng tâm là trải nghiệm người dùng, khả năng mở rộng và khả năng bảo trì, Nhà Mình là một lựa chọn tuyệt vời cho các doanh nghiệp muốn thiết lập sự hiện diện trực tuyến mạnh mẽ.
 
-✨ Features
-==========
+# Tính năng
 
-Here are some of the key features of the E-commerce Website:
+Dưới đây là một số tính năng chính của Nhà Mình:
 
-1. **User Authentication**: Users can create accounts and log in to access their account information and order history.
-2. **Product Categorization**: Products are organized into categories, making it easy for users to find what they are looking for.
-3. **Shopping Cart Management**: Users can add and remove products from their shopping cart, and view their cart contents at any time.
-4. **Payment Processing**: The website integrates with various payment gateways, allowing users to securely pay for their purchases.
-5. **Order Management**: Users can view their order history and track the status of their orders.
-6. **Product Reviews**: Users can leave reviews and ratings for products, helping others make informed purchasing decisions.
-7. **Search Functionality**: Users can search for products by keyword, category, or brand.
-8. **Responsive Design**: The website is optimized for various devices, including desktops, laptops, tablets, and mobile phones.
-9. **Robust Testing Framework**: The application includes a comprehensive testing framework, ensuring that the website is thoroughly tested and validated before deployment.
-10. **Modular Architecture**: The website is built using a modular architecture, making it easy to maintain and update.
+1. **Xác thực người dùng**: Người dùng có thể tạo tài khoản và đăng nhập để truy cập thông tin tài khoản cũng như lịch sử đơn hàng của họ.
+2. **Phân loại sản phẩm**: Các sản phẩm được tổ chức thành các danh mục, giúp người dùng dễ dàng tìm thấy những gì họ đang tìm kiếm.
+3. **Quản lý giỏ hàng**: Người dùng có thể thêm và xóa sản phẩm khỏi giỏ hàng của họ và xem nội dung giỏ hàng bất cứ lúc nào.
+4. **Xử lý thanh toán**: Trang web tích hợp với nhiều cổng thanh toán khác nhau, cho phép người dùng thanh toán an toàn cho các giao dịch mua hàng của mình.
+5. **Quản lý đơn hàng**: Người dùng có thể xem lịch sử đơn hàng và theo dõi trạng thái đơn hàng của họ.
+6. **Đánh giá sản phẩm**: Người dùng có thể để lại đánh giá và xếp hạng cho các sản phẩm, giúp những người khác đưa ra quyết định mua hàng sáng suốt.
+7. **Chức năng tìm kiếm**: Người dùng có thể tìm kiếm sản phẩm theo từ khóa, danh mục hoặc thương hiệu.
+8. **Thiết kế đáp ứng**: Trang web được tối ưu hóa cho nhiều thiết bị khác nhau, bao gồm máy tính để bàn, máy tính xách tay, máy tính bảng và điện thoại di động.
+9. **Khuôn khổ thử nghiệm mạnh mẽ**: Ứng dụng bao gồm một khuôn khổ thử nghiệm toàn diện, đảm bảo rằng trang web được thử nghiệm và xác thực kỹ lưỡng trước khi triển khai.
+10. **Kiến trúc mô-đun**: Trang web được xây dựng theo kiến trúc mô-đun, giúp dễ dàng bảo trì và cập nhật.
 
-🧰 Tech Stack Table
-==================
+# Bảng Công nghệ
 
-| Category | Tool/Technology |
-| --- | --- |
-| Frontend | React, React Router, CSS, HTML |
-| Backend | Node.js, Express.js |
-| Tools | Webpack, Babel, Jest, Enzyme |
-| Database | MongoDB |
-| Payment Gateway | Stripe |
+| Hạng mục        | Công cụ/Công nghệ              |
+| --------------- | ------------------------------ |
+| Frontend        | React, React Router, CSS, HTML |
+| Backend         | Node.js, Express.js            |
+| Công cụ         | Webpack, Babel, Jest, Enzyme   |
+| Cơ sở dữ liệu   | MongoDB                        |
+| Cổng thanh toán | Stripe                         |
 
-📁 Project Structure
-=====================
+# Cấu trúc dự án
 
-The project is organized into the following folders:
+Dự án được tổ chức thành các thư mục sau:
 
-* `public`: Contains static assets, such as images and fonts.
-* `src`: Contains the application code, including components, containers, and utilities.
-* `components`: Contains reusable UI components, such as buttons and forms.
-* `containers`: Contains components that wrap around other components, providing additional functionality.
-* `utils`: Contains utility functions, such as API requests and data formatting.
-* `pages`: Contains page-level components, such as the home page and about page.
-* `context`: Contains context providers, which manage state and provide it to components.
-* `tests`: Contains tests for the application, including unit tests and integration tests.
+- `public`: Chứa các nội dung tĩnh, chẳng hạn như hình ảnh và phông chữ.
+- `src`: Chứa mã nguồn ứng dụng, bao gồm các thành phần (components), bộ chứa (containers) và các tiện ích (utilities).
+- `components`: Chứa các thành phần UI có thể tái sử dụng, chẳng hạn như nút và biểu mẫu.
+- `containers`: Chứa các thành phần bao bọc xung quanh các thành phần khác, cung cấp thêm chức năng.
+- `utils`: Chứa các hàm tiện ích, chẳng hạn như các yêu cầu API và định dạng dữ liệu.
+- `pages`: Chứa các thành phần cấp độ trang, chẳng hạn như trang chủ và trang giới thiệu.
+- `context`: Chứa các context provider, quản lý trạng thái và cung cấp trạng thái đó cho các thành phần.
+- `tests`: Chứa các bài kiểm tra cho ứng dụng, bao gồm kiểm tra đơn vị (unit tests) và kiểm tra tích hợp (integration tests).
 
-⚙️ How to Run
-=============
+# Cách chạy
 
-To run the application, follow these steps:
+Để chạy ứng dụng, hãy làm theo các bước sau:
 
-1. Clone the repository using `git clone`.
-2. Install the dependencies using `npm install`.
-3. Start the application using `npm start`.
-4. Open a web browser and navigate to `http://localhost:3000`.
-5. To build the application for production, use `npm run build`.
-6. To deploy the application, use a tool like `create-react-app` or a custom deployment script.
+1. Sao chép kho lưu trữ bằng lệnh `git clone`.
+2. Cài đặt các phụ thuộc bằng lệnh `npm install`.
+3. Khởi động ứng dụng bằng lệnh `npm start`.
+4. Mở trình duyệt web và điều hướng tới `http://localhost:3000`.
+5. Để xây dựng ứng dụng cho môi trường sản xuất (production), hãy sử dụng `npm run build`.
+6. Để triển khai ứng dụng, hãy sử dụng một công cụ như `create-react-app` hoặc một tập lệnh triển khai tùy chỉnh.
 
-🧪 Testing Instructions
-=====================
+# Hướng dẫn kiểm tra (Testing)
 
-To run the tests, follow these steps:
+Để chạy các bài kiểm tra, hãy làm theo các bước sau:
 
-1. Install the dependencies using `npm install`.
-2. Run the tests using `npm run test`.
-3. To run a specific test, use `npm run test -- <test-name>`.
-4. To generate a test coverage report, use `npm run test:coverage`.
+1. Cài đặt các phụ thuộc bằng lệnh `npm install`.
+2. Chạy kiểm tra bằng lệnh `npm run test`.
+3. Để chạy một bài kiểm tra cụ thể, hãy sử dụng `npm run test -- <test-name>`.
+4. Để tạo báo cáo mức độ bao phủ của kiểm tra, hãy sử dụng `npm run test:coverage`.
 
-📸 Screenshots
-=============
+# Ảnh chụp màn hình
 
-Here are some screenshots of the application:
+Dưới đây là một số ảnh chụp màn hình của ứng dụng:
 
-* **Home Page**: [insert screenshot of home page]
-* **Product Page**: [insert screenshot of product page]
-* **Shopping Cart**: [insert screenshot of shopping cart]
+- **Trang chủ**: [chèn ảnh chụp màn hình trang chủ]
+- **Trang sản phẩm**: [chèn ảnh chụp màn hình trang sản phẩm]
+- **Giỏ hàng**: [chèn ảnh chụp màn hình giỏ hàng]
 
-📦 API Reference
-==============
+# Tài liệu tham khảo API
 
-The application uses the following APIs:
+Ứng dụng sử dụng các API sau:
 
-* **Product API**: `https://example.com/api/products`
-* **Order API**: `https://example.com/api/orders`
-* **User API**: `https://example.com/api/users`
-
-
-📝 License
-=======
-
-The E-commerce Website is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+- **Product API**: `https://example.com/api/products`
+- **Order API**: `https://example.com/api/orders`
+- **User API**: `https://example.com/api/users`
